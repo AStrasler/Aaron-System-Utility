@@ -1,0 +1,18 @@
+# Logs and Reports
+Logs/
+Reports/
+
+# Temporary files
+*.tmp
+*.log
+Temp/
+
+# PowerShell artifacts
+*.ps1xml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Git
+.gitignore
