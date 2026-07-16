@@ -49,3 +49,43 @@ MIT License — feel free to fork and contribute.
 
 **Made with ❤️ for power users and sysadmins.**  
 Contributions, issues, and feature requests welcome!
+
+## 📂 Double-click Launcher
+
+If you want to open ASU by double-clicking a file, use the provided `launcher.bat` or create a shortcut:
+
+- Double-click `launcher.bat` (located next to `ASU.ps1`) to open PowerShell and run ASU while keeping the window open.
+- Contents of `launcher.bat`:
+
+```bat
+@echo off
+REM Simple double-click launcher for Aaron-System-Utility
+SET SCRIPT_DIR=%~dp0
+powershell -NoProfile -NoExit -ExecutionPolicy Bypass -File "%SCRIPT_DIR%ASU.ps1"
+```
+
+## 📌 Desktop / Start Menu Shortcut
+
+1. Right-click the Desktop and choose New → Shortcut.
+2. For Target, paste:
+
+```
+powershell -NoExit -ExecutionPolicy Bypass -File "C:\Path\To\Aaron-System-Utility\ASU.ps1"
+```
+
+3. Set "Start in" to the repo folder and finish. If the script needs admin rights, enable "Run as administrator" in Shortcut > Advanced.
+
+## ⚙️ Quick Troubleshooting
+
+- If PowerShell blocks the script, run once in an elevated PowerShell:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+```
+
+- Or launch without changing policies:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\ASU.ps1
+```
+
