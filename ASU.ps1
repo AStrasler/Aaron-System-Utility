@@ -28,10 +28,10 @@ Import-Module "$ScriptPath\Reports.psm1" -Force
 # Main Menu Function
 function Show-MainMenu {
     Clear-Host
-    Write-Host "╔════════════════════════════════════════╗" -ForegroundColor Cyan
-    Write-Host "║     AARON SYSTEM UTILITY (ASU)         ║" -ForegroundColor Cyan
-    Write-Host "║          Main Menu                     ║" -ForegroundColor Cyan
-    Write-Host "╚════════════════════════════════════════╝" -ForegroundColor Cyan
+    Write-Host "========================================" -ForegroundColor Cyan
+    Write-Host "   AARON SYSTEM UTILITY (ASU)" -ForegroundColor Cyan
+    Write-Host "          Main Menu" -ForegroundColor Cyan
+    Write-Host "========================================" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "1. Battery Management" -ForegroundColor Green
     Write-Host "2. Cleanup Utilities" -ForegroundColor Green
