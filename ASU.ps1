@@ -25,6 +25,25 @@ Import-Module "$ScriptPath\Reports.psm1" -Force
 # Set console title
 [Console]::Title = "Aaron System Utility"
 
+# Logging function used by all modules
+function Write-ASULog {
+    param(
+        [string]$Message,
+        [string]$Level = "Info"
+    )
+    $Timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+    
+    # Simple console output for now
+    $Color = switch ($Level) {
+        "Error" { "Red" }
+        "Warning" { "Yellow" }
+        "Info" { "Green" }
+        default { "White" }
+    }
+    
+    Write-Host "[$Timestamp] [$Level] $Message" -ForegroundColor $Color
+}
+
 # Main Menu Function
 function Show-MainMenu {
     Clear-Host
